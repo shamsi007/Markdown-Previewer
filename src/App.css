@@ -1,13 +1,11 @@
 body{
   background-color: #87B5B5;
 }
-.editorWrap {
-  max-width: 600px;
-  margin: 1.125rem auto;
+h1{
+  text-align: center;
+  padding: 30px 0px 0px 30px;
 }
-.editorWrap .toolbar {
-  width: 99%;
-}
+
 .toolbar {
   text-align: center;
   align-items: center;
@@ -21,7 +19,7 @@ body{
 }
 .editorWrap textarea,#preview {
   width: 99%;
-  min-height: 200px;
+  min-height: 595px;
   resize: vertical;
   outline: none;
   padding-left: 5px;
@@ -31,11 +29,14 @@ body{
   border: 1px solid #1d2f2f;
   box-shadow: 10px 10px #3a5f5f;
 }
-.previewWrap {
-  max-width: 800px;
-  margin: 1.25rem auto;
-  min-height: 200px;
-}
+
 #preview img{
   width: 100%;
+}
+.gutter {
+  width: 10px;
+  height: 100%;
+  background: grey;
+  position: absolute;
+  cursor: col-resize;
 }

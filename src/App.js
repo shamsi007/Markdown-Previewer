@@ -1,7 +1,7 @@
 import { marked } from 'marked';
 import { useState } from 'react';
 import './App.css';
-
+import Split from 'react-split'
 function App() {
   const [editorText,setEditorText] = 
     useState(`This is paragraph
@@ -23,19 +23,32 @@ This a inline \`<div></div>\`
 `);
   const markdown = marked(editorText, {breaks:true});
   return (
-    <div className="container">
-      <div className="editorWrap">
-        <div className="toolbar">
-          Editor
+    <>
+    <h1>Markdown Previewer</h1>
+    <div className="d-flex">
+      <Split 
+      sizes={[50, 50]}
+      direction="horizontal"
+      cursor="col-resize"
+      >
+      
+        <div className="editorWrap">
+          <div className="toolbar">
+            Editor
+          </div>
+          <textarea id="editor" type="text" value={editorText} onChange={e => setEditorText(e.target.value)} />
         </div>
-        <textarea id="editor" type="text" value={editorText} onChange={e => setEditorText(e.target.value)} />
-      </div>
+      
+      
       <div className="previewWrap">
           <div className="toolbar">Previewer</div>
             <div id="preview" dangerouslySetInnerHTML={{__html: markdown}}>
             </div>
         </div>
+      
+      </Split>
     </div>
+    </>
   );
 }
 
