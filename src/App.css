@@ -27,7 +27,6 @@ h1{
   font-size: 0.875rem;
   background-color: #c0d8d8;
   border: 1px solid #1d2f2f;
-  box-shadow: 10px 10px #3a5f5f;
 }
 
 #preview img{
@@ -38,5 +37,12 @@ h1{
   height: 100%;
   background: grey;
   position: absolute;
+  cursor: col-resize;
+}
+.gutter {
+  width: 10px;
+  height: 100%;
+  background: grey;
+  position: relative;
   cursor: col-resize;
 }

@@ -27,9 +27,9 @@ This a inline \`<div></div>\`
     <h1>Markdown Previewer</h1>
     <div className="d-flex">
       <Split 
-      sizes={[50, 50]}
-      direction="horizontal"
-      cursor="col-resize"
+        direction="horizontal"
+        cursor="col-resize"
+        style={{display:"flex"}}
       >
       
         <div className="editorWrap">
@@ -40,10 +40,9 @@ This a inline \`<div></div>\`
         </div>
       
       
-      <div className="previewWrap">
+        <div className="previewWrap">
           <div className="toolbar">Previewer</div>
-            <div id="preview" dangerouslySetInnerHTML={{__html: markdown}}>
-            </div>
+          <div id="preview" dangerouslySetInnerHTML={{__html: markdown}}></div>
         </div>
       
       </Split>
